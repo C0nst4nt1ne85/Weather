@@ -45,7 +45,7 @@ main {
 .infobox {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 50px;
-    max-width: 60%;
+    max-width: 100%;
     max-height: 60%;
     margin: auto;
     padding: 20px;
@@ -58,7 +58,7 @@ main {
 }
 
 .infobox p {
-    font-size: 80px;
+    font-size: 60px;
     margin: 0;
 }
 
@@ -68,11 +68,15 @@ button {
     font-family: 'Lato', sans-serif;
     border: none;
     cursor: pointer;
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .measure {
     display: inline;
+}
+
+#scale {
+    color: #555;
 }
 
 footer {
