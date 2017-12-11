@@ -9,7 +9,7 @@ function getLocation() {
             url: getUrl
         })
             .done(function (data) {
-                $("#temp").html((data.main.temp).toFixed(1));
+                $("#temp").html((data.main.temp).toFixed(0));
 
                 if (data.weather[0].id <= 232) {
                     $("#catchphrase").html(`Beware, ${data.weather[0].description} over ${data.name}`);
@@ -52,11 +52,11 @@ function getLocation() {
 function changeScale() {
     if ($("#scale").text() == "°C") {
         $("#scale").html("°F");
-        $("#temp").html($("#temp").text() * 1.8 + 32);
+        $("#temp").html(($("#temp").text() * 1.8 + 32).toFixed(0));
         
     } else {
         $("#scale").html("°C");
-        $("#temp").html((($("#temp").text()-32) / 1.8).toFixed(1));
+        $("#temp").html((($("#temp").text()-32) / 1.8).toFixed(0));
     }
 
 };
